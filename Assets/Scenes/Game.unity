@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed: 404
-  biome: {fileID: 11400000, guid: b7b9d1843ba3d8646ad2d6acc0a1eebb, type: 2}
+  biome: {fileID: 11400000, guid: d5959026bf0e14a91a98d20df515a011, type: 2}
   player: {fileID: 238933407}
   spawnPosition: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: 4002cc8752a80e446974faa606b908b0, type: 2}
@@ -835,6 +835,18 @@ MonoBehaviour:
     bottomFaceTexture: 10
     leftFaceTexture: 8
     rightFaceTexture: 8
+  - blockName: Planks
+    isSolid: 1
+    isTransparent: 0
+    icon: {fileID: 21300112, guid: 849b24ad601f4b140be69eee993879e0, type: 3}
+    digSound: {fileID: 8300000, guid: e6b5fef156f61498b9b2d1d829b7a475, type: 3}
+    walkSound: {fileID: 8300000, guid: b290f24b4053b4b78ba37d9400d23408, type: 3}
+    backFaceTexture: 4
+    frontFaceTexture: 4
+    topFaceTexture: 4
+    bottomFaceTexture: 4
+    leftFaceTexture: 4
+    rightFaceTexture: 4
   debugScreen: {fileID: 1379116040}
 --- !u!4 &468801367
 Transform:
@@ -1662,6 +1674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc0e5fa15acb8b409e029436d580f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 238933408}
+  debugMode: 0
 --- !u!1001 &1510682281
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class DebugScreen : MonoBehaviour
 
 	World world;
 	Text text;
+	public Player player;
+	public bool debugMode = true;
 
 	float frameRate;
 	float timer;
@@ -29,10 +31,15 @@ public class DebugScreen : MonoBehaviour
 		string debugText = "MineT (c) @itmaxxx 2020-2021";
 		debugText += "\n";
 		debugText += frameRate + " FPS";
-		debugText += "\n";
-		debugText += "Player X " + Mathf.FloorToInt(world.player.transform.position.x - halfWorldSizeInVoxels) + " Y " + Mathf.FloorToInt(world.player.transform.position.y) + " Z " + Mathf.FloorToInt(world.player.transform.position.z - halfWorldSizeInVoxels);
-		debugText += "\n";
-		debugText += "Chunk X " + Mathf.FloorToInt(world.playerChunkCoord.x - halfWorldSizeInChunks) + " Z " + Mathf.FloorToInt(world.playerChunkCoord.z - halfWorldSizeInChunks);
+
+		if (debugMode) {
+			debugText += "\n";
+			debugText += "Player X " + Mathf.FloorToInt(world.player.transform.position.x - halfWorldSizeInVoxels) + " Y " + Mathf.FloorToInt(world.player.transform.position.y) + " Z " + Mathf.FloorToInt(world.player.transform.position.z - halfWorldSizeInVoxels);
+			debugText += "\n";
+			debugText += "Chunk X " + Mathf.FloorToInt(world.playerChunkCoord.x - halfWorldSizeInChunks) + " Z " + Mathf.FloorToInt(world.playerChunkCoord.z - halfWorldSizeInChunks);
+			debugText += "\n";
+			debugText += "Selected block #" + player.selectedBlockID + " (" + world.blockTypes[player.selectedBlockID].blockName + ")";
+		}
 
 		text.text = debugText;
 

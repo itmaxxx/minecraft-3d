@@ -99,9 +99,6 @@ public class Player : MonoBehaviour
 			if (!walkSource.isPlaying) {
 				byte walkingBlockID = world.GetVoxel(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z));
 
-				Debug.Log(walkingBlockID);
-				Debug.Log(transform.position.y - 0.5f);
-
 				if (walkingBlockID != 0) {
 					walkSource.clip = world.blockTypes[walkingBlockID].walkSound;
 					walkSource.Play();
