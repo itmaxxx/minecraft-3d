@@ -97,8 +97,15 @@ public class Player : MonoBehaviour
 		// Walk sound
 		if (velocity.x != 0 || velocity.z != 0) {
 			if (!walkSource.isPlaying) {
-				// walkSource.clip = grassWalk;
-				walkSource.Play();
+				byte walkingBlockID = world.GetVoxel(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z));
+
+				Debug.Log(walkingBlockID);
+				Debug.Log(transform.position.y - 0.5f);
+
+				if (walkingBlockID != 0) {
+					walkSource.clip = world.blockTypes[walkingBlockID].walkSound;
+					walkSource.Play();
+				}
 			}
 		}
 

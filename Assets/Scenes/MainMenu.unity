@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 1825717701}
   - component: {fileID: 1825717700}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: MenuBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 736a7f2da757c4b388e655ca60a87468, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6dc97a1942feb496c87985ed31408fea, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
